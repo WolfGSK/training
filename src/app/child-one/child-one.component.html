@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-primary">this is the child-one-component</div>
+  </div>
+  <p class="text-warning">
+    this is going to print anything you type in the input
+  </p>
+  <input type="text" class="form-control" [(ngModel)]="innerText" />
+  <p>
+    Here the text will be displayed:
+    <span class="text-danger">{{ innerText }}</span>
+  </p>
+  <button
+    class="btn btn-primary"
+    (click)="btnReset()"
+    [disabled]="innerText === ''"
+  >
+    Reset text input
+  </button>
+  <button
+    class="btn btn-warning"
+    (click)="onGenerate()"
+    [disabled]="innerText === ''"
+  >
+    Generate the text input
+  </button>
+  <button class="btn btn-danger"
+  (click)="onDestroyFirst()"
+  [disabled]="text.length < 1">Erase the first text input</button>
+  <button class="btn btn-outline-success"
+  (click)="onDestroylast()"
+  [disabled]="text.length < 1">Erase the first text input</button>
+  <div class="col-m-3">
+    <p
+      class="text-primary"
+      *ngFor="let itemText of text; let i = index"
+      [ngStyle]="{ backgroundColor: getColor(i)}"
+      [ngClass]="{'text-light': i>=2 && i<=6}"
+    >
+      {{ itemText }}
+    </p>
+  </div>
+</div>
