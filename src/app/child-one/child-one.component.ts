@@ -15,9 +15,7 @@ export class ChildOneComponent {
   }
 
   onGenerate() {
-
     this.text.push(this.innerText);
-    // this.color = (Math.random()*10);
   }
 
   onDestroyFirst() {

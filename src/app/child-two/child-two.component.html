@@ -1,5 +1,11 @@
 <div class="container">
-    <div class="row">
-        <div class="col-xs-6">this is the child-2</div>
-    </div>
+  <div class="row">
+    <div class="col-xs-6">this is the child-2</div>
+    <hr />
+    <app-child-two-one
+      *ngFor="let bookEl of books"
+      [book]="bookEl"
+      (bookSelected)="onBookSelected()"
+    ></app-child-two-one>
+  </div>
 </div>

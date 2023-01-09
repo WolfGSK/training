@@ -24,18 +24,26 @@
   >
     Generate the text input
   </button>
-  <button class="btn btn-danger"
-  (click)="onDestroyFirst()"
-  [disabled]="text.length < 1">Erase the first text input</button>
-  <button class="btn btn-outline-success"
-  (click)="onDestroylast()"
-  [disabled]="text.length < 1">Erase the first text input</button>
+  <button
+    class="btn btn-danger"
+    (click)="onDestroyFirst()"
+    [disabled]="text.length < 1"
+  >
+    Erase the first text input
+  </button>
+  <button
+    class="btn btn-outline-success"
+    (click)="onDestroylast()"
+    [disabled]="text.length < 1"
+  >
+    Erase the first text input
+  </button>
   <div class="col-m-3">
     <p
       class="text-primary"
       *ngFor="let itemText of text; let i = index"
-      [ngStyle]="{ backgroundColor: getColor(i)}"
-      [ngClass]="{'text-light': i>=2 && i<=6}"
+      [ngStyle]="{ backgroundColor: getColor(i) }"
+      [ngClass]="{ 'text-light': i >= 2 && i <= 6 }"
     >
       {{ itemText }}
     </p>
