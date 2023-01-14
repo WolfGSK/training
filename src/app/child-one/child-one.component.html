@@ -36,14 +36,13 @@
     (click)="onDestroylast()"
     [disabled]="text.length < 1"
   >
-    Erase the first text input
+    Erase the last text input
   </button>
-  <div class="col-m-3">
+  <div>
     <p
-      class="text-primary"
-      *ngFor="let itemText of text; let i = index"
-      [ngStyle]="{ backgroundColor: getColor(i) }"
-      [ngClass]="{ 'text-light': i >= 2 && i <= 6 }"
+      class="p-2"
+      *ngFor="let itemText of text;"
+      [ngStyle]="{ backgroundColor: getColor() }"
     >
       {{ itemText }}
     </p>

@@ -1,17 +1,17 @@
 <a href="#" class="list-group-item clearfix" (click)="onSelected()">
-  <div>
-    <div class="col xs-6">
-      <h4 class="list-group-item-heading">{{ book.name }}</h4>
-      <p class="list-group-item-text">{{ book.author }}</p>
-    </div>
-    <span>
+  <div class="col-xs-12">
+    <span class="float-start">
       <img
         [src]="book.imagePath"
         alt=" {{ book.name }}"
         class="img-responsive"
-        style="max-height: 100px"
+        style="max-height: 200px"
       />
     </span>
+    <div class="col-xs-6 red">
+      <h4 class="list-group-item-heading">{{ book.name }}</h4>
+      <p class="list-group-item-text">{{ book.author }}</p>
+    </div>
   </div>
 </a>
 <hr />
